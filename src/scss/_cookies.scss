@@ -1,0 +1,70 @@
+.cookies {
+    position: fixed;
+    max-width: 790px;
+    bottom: 0;
+    right: 0;
+    background: #f9fafb;
+    border: 1px solid #E5E7EB;
+    border-radius: 32px 0 0 0;
+    padding: 12px 24px;
+    width: 100%;
+    transition: 1s;
+    &.cookies-out {
+        bottom: -60px;
+        @media (max-width: 800px) {
+            bottom: -120px;
+        }
+    }
+    @media (max-width: 800px) {
+        max-width: 100%;
+        border-radius: 0;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 30px;
+        @media (max-width: 800px) {
+            justify-content: flex-start;
+        }
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: $mainBlack;
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        &:before {
+            content: url('../img/cookies.svg')
+        }
+    }
+    &__btn {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: $mainBlack;
+        background: transparent;
+        &-decline {
+            transition: 0.4s ease-in-out;
+            &:hover {
+                transition: 0.4s ease-in-out;
+                color: #6B7280;
+            }
+        }
+        &-accept {
+            padding: 8px;
+            border: 1px solid #E5E7EB;
+            border-radius: 32px;
+            margin-left: 8px;
+            transition: 0.4s;
+            &:hover {
+                color: #F9FAFB;
+                transition: 0.4s;
+                background: $mainBlack;
+            }
+        }
+    }
+}

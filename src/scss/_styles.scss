@@ -1,0 +1,118 @@
+$mainBlack: #111827;
+$mainGreen: #28776D;
+$mainLightGreen: #3D847B;
+$mainLightGrey: #F3F4F6;
+$mainGrey: #4B5563;
+$mainDarkGrey: #6B7280;
+$mainYellow: #EDB55A;
+
+%main-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #fff;
+    background: $mainBlack;
+    width: 214px;
+    height: 84px;
+    transition: 0.4s;
+    &:hover {
+        transition: 0.4s;
+        background: #374151;
+    }
+    @media (max-width: 425px) {
+        width: 100%;
+    }
+}
+
+%section-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: $mainBlack;
+}
+
+%section-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $mainBlack;
+    @media (max-width: 768px) {
+        font-size: 48px;
+    }
+    @media (max-width: 520px) {
+        font-size: 32px;
+    }
+}
+// reset styles
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+body {
+    overflow-x: hidden;
+    font-family: 'CormorantUpright', sans-serif;
+    &.lock {
+        @media (max-width: 425px) {
+            overflow: hidden;
+        }
+    }
+}
+
+main {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1760px;
+    padding: 0 32px;
+    width: 100%;
+    margin: 0px auto !important;
+    @media (max-width: 425px) {
+        padding: 0 20px;
+    }
+}
