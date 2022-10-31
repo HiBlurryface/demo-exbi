@@ -55,6 +55,9 @@ $(function (scrollMagic) {
         .setTween(".intro", 0.5, { opacity: 1 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: "body", triggerHook: 0 })
+        .setTween(".intro__animation", 0.5, { opacity: 1 })
+        .addTo(controller);
+    var scene = new ScrollMagic.Scene({ triggerElement: "body", triggerHook: 0 })
         .setTween(".intro__heading-group", 0.5, { translateY: 0, opacity: 1 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: "body", triggerHook: 0 })

@@ -751,7 +751,7 @@ main {
   opacity: 0;
   transition: 1s;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1320px) {
   .intro {
     padding: 165px 0 100px;
   }
@@ -766,23 +766,18 @@ main {
   justify-content: space-between;
   gap: 0 30px;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1320px) {
   .intro__content {
     flex-direction: column-reverse;
   }
 }
 .intro__heading {
-  max-width: 820px;
+  max-width: 800px;
   padding-top: 50px;
 }
 @media (max-width: 1600px) {
   .intro__heading {
     max-width: 600px;
-  }
-}
-@media (max-width: 1600px) {
-  .intro__heading {
-    max-width: 820px;
   }
 }
 .intro__heading-title {
@@ -829,7 +824,7 @@ main {
     display: none;
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 1320px) {
   .intro__heading-title .title-to-right svg {
     display: block;
   }
@@ -874,21 +869,485 @@ main {
   }
 }
 .intro__animation {
+  position: relative;
   flex: 1 1 auto;
   max-width: 762px;
+  opacity: 0;
 }
-@media (max-width: 1600px) {
-  .intro__animation {
-    max-width: 610px;
-  }
-}
-@media (max-width: 1220px) {
+@media (max-width: 1320px) {
   .intro__animation {
     margin: 0px auto;
   }
 }
 .intro__animation-bg {
   width: 100%;
+}
+.intro__animation-bg._animation-success-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+.intro__animation .animation__items {
+  transition: 0.6s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro__animation .animation__product {
+  justify-content: space-between;
+  height: 100%;
+  transition: 0.6s;
+  width: calc(100% + 360px);
+  position: absolute;
+  top: 180px;
+  left: -180px;
+  display: flex;
+  gap: 2%;
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__product {
+    left: -100px;
+    width: calc(100% + 200px);
+  }
+}
+.intro__animation .animation__item {
+  transition: 0.6s;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  gap: 30px;
+  width: 32%;
+  padding: 48px;
+  background: #E5E7EB;
+  border-radius: 48px;
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__item {
+    padding: 26px;
+    border-radius: 26px;
+    gap: 0;
+  }
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__item {
+    padding: 22px;
+    border-radius: 22px;
+  }
+}
+.intro__animation .animation__item:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+}
+.intro__animation .animation__item-pic {
+  width: 100%;
+}
+.intro__animation .animation__item-group {
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__item-group {
+    gap: 0 16px;
+  }
+}
+.intro__animation .animation__item-price {
+  width: 100%;
+}
+.intro__animation .animation__item-price span {
+  display: block;
+  height: 13px;
+  background: #D1D5DB;
+  border-radius: 90.8108px;
+}
+.intro__animation .animation__item-price span:first-child {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 11px;
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__item-price span:first-child {
+    margin-bottom: 6px;
+  }
+}
+.intro__animation .animation__item-price span:last-child {
+  max-width: 85px;
+  width: 100%;
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__item-price span:last-child {
+    width: 50%;
+  }
+}
+.intro__animation .animation__item-btn {
+  flex: 0 0 auto;
+  width: 58.12px;
+  height: 58.12px;
+  background: #28776D;
+  border-radius: 90.8108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 520px) {
+  .intro__animation .animation__item-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+.intro__animation .animation__method {
+  transition: 0.6s;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 40px;
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method {
+    padding: 0 30px;
+  }
+}
+.intro__animation .animation__method-block {
+  margin: 0px auto;
+  max-width: 562px;
+  width: 100%;
+  background: #D1D5DB;
+  padding: 34px 48px;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.6s;
+}
+.intro__animation .animation__method-block:first-child {
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__method-block {
+    padding: 22px 38px;
+  }
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method-block {
+    padding: 14pX 24px;
+  }
+}
+.intro__animation .animation__method-title {
+  font-weight: 500;
+  font-size: 27.4267px;
+  line-height: 37px;
+  color: #111827;
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__method-title {
+    font-size: 21px;
+  }
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method-title {
+    font-size: 18px;
+  }
+}
+.intro__animation .animation__method-group {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method-group {
+    gap: 0 5px;
+  }
+}
+.intro__animation .animation__method-icon {
+  transition: 0.6s;
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method-icon {
+    width: 30px;
+  }
+}
+.intro__animation .animation__crypto {
+  padding: 0 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+}
+.intro__animation .animation__crypto-title {
+  color: #111827;
+  font-weight: 400;
+  font-size: 48.7586px;
+  line-height: 55px;
+  text-transform: uppercase;
+  margin: 0px auto 32px;
+  max-width: 555px;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__crypto-title {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0px auto 16px;
+  }
+}
+.intro__animation .animation__crypto-block {
+  margin: 0px auto;
+  max-width: 555px;
+  width: 100%;
+  background: #D1D5DB;
+  padding: 32px;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  transition: 0.6s;
+  gap: 0 15px;
+}
+.intro__animation .animation__crypto-block:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__crypto-block:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__crypto-block {
+    padding: 22px;
+  }
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__crypto-block {
+    padding: 14px 24px;
+  }
+}
+.intro__animation .animation__crypto-name {
+  font-weight: 500;
+  font-size: 27.4267px;
+  line-height: 37px;
+  color: #111827;
+}
+@media (max-width: 768px) {
+  .intro__animation .animation__crypto-name {
+    font-size: 21px;
+  }
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__crypto-name {
+    font-size: 18px;
+  }
+}
+.intro__animation .animation__crypto-currency {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 37px;
+  color: #6B7280;
+  margin-left: auto;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__crypto-currency {
+    font-size: 16px;
+  }
+}
+.intro__animation .animation__payment {
+  margin: 0px auto 32px;
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 120px);
+  transition: 0.6s;
+  padding: 0 40px;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__payment {
+    top: 80px;
+  }
+}
+@media (max-width: 425px) {
+  .intro__animation .animation__payment {
+    top: 60px;
+  }
+}
+.intro__animation .animation__payment-heading {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 0 20px;
+}
+.intro__animation .animation__payment-wrapper {
+  max-width: 595px;
+  margin: 0px auto;
+}
+.intro__animation .animation__payment-title {
+  color: #111827;
+  font-weight: 400;
+  font-size: 48.7586px;
+  line-height: 55px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__payment-title {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+}
+.intro__animation .animation__payment-timer {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  color: #D44C57;
+  font-weight: 500;
+  font-size: 26.8885px;
+  line-height: 34px;
+}
+.intro__animation .animation__payment-group:first-child {
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 20px;
+}
+.intro__animation .animation__payment-contain {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  padding: 10px 0 20px;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__payment-contain {
+    padding: 6px 0 16px;
+  }
+}
+.intro__animation .animation__payment-info {
+  font-weight: 400;
+  font-size: 29.0161px;
+  line-height: 150%;
+  color: #6B7280;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__payment-info {
+    font-size: 19px;
+  }
+}
+.intro__animation .animation__payment-text {
+  font-weight: 400;
+  font-size: 29.0161px;
+  line-height: 150%;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__payment-text {
+    font-size: 24px;
+  }
+}
+.intro__animation .animation__payment-copy {
+  margin-left: auto;
+}
+.intro__animation .animation__payment-qr {
+  background: #fff;
+  padding: 34px;
+  border: 2.12161px solid #E5E7EB;
+  border-radius: 25.4594px;
+  width: fit-content;
+  margin: 30px auto 0;
+}
+.intro__animation .animation__payment-qr img {
+  width: 100%;
+}
+.intro__animation .animation__payment-btn {
+  background: #111827;
+  padding: 34px 48px;
+  border-radius: 152.371px;
+  font-weight: 500;
+  font-size: 27.4267px;
+  line-height: 37px;
+  color: #F9FAFB;
+  margin-top: 40px;
+  text-align: center;
+  transition: 0.6s;
+}
+.intro__animation .animation__confirming {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: 100%;
+}
+.intro__animation .animation__confirming-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  transform: translateY(120px);
+}
+.intro__animation .animation__confirming-text {
+  font-weight: 400;
+  font-size: 53.7769px;
+  line-height: 60px;
+  color: #111827;
+  text-transform: uppercase;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__confirming-text {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+.intro__animation .animation__success {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: 100%;
+}
+.intro__animation .animation__success-wrapper {
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  transform: translateY(120px);
+  opacity: 0;
+  visibility: hidden;
+}
+.intro__animation .animation__success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto 26px;
+  width: 100px;
+  height: 100px;
+  background: #4ADE80;
+  border-radius: 100px;
+}
+.intro__animation .animation__success-text {
+  font-weight: 400;
+  font-size: 53.7769px;
+  line-height: 60px;
+  color: #111827;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 650px) {
+  .intro__animation .animation__success-text {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .about {
@@ -1183,6 +1642,9 @@ main {
     padding: 32px;
     border-radius: 32px;
   }
+}
+.work__block-img {
+  width: 515px;
 }
 @media (max-width: 768px) {
   .work__block-img {
