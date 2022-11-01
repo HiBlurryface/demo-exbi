@@ -1191,7 +1191,7 @@ main {
 .intro__animation .animation__crypto._show {
   opacity: 1;
   visibility: visible;
-  top: 50%;
+  top: 37%;
   transform: translate(0, -50%);
 }
 .intro__animation .animation__crypto._hide {
