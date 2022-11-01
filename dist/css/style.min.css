@@ -438,6 +438,7 @@ main {
   position: relative;
   width: fit-content;
   transition: 0.6s;
+  z-index: 3;
 }
 @media (max-width: 1024px) {
   .footer__lang {
@@ -469,19 +470,29 @@ main {
 }
 .footer__lang-dropdown {
   background: #D1D5DB;
-  border-radius: 0 0 50px 50px;
+  z-index: -1;
+  border-radius: 50px;
   position: absolute;
   left: 0;
-  display: none;
   width: 100%;
+  top: 0;
+  display: flex;
+  transition: 0.6s;
+  height: 100%;
+}
+.footer__lang-dropdown.active {
+  transition: 0.6s;
+  height: 168px;
 }
 .footer__lang-menu {
+  width: 100%;
   border-radius: 0 0 50px 50px;
   cursor: pointer;
   padding: 24px 48px;
   gap: 0 10px;
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 .footer__lang img {
   z-index: 10;
@@ -890,24 +901,33 @@ main {
   opacity: 0;
   visibility: hidden;
 }
-.intro__animation .animation__items {
-  transition: 0.6s;
-  width: 100%;
-  height: 100%;
+.intro__animation .animation__wrapper {
+  height: 87%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 13%;
+  width: 100%;
+}
+.intro__animation .animation__wrapper._anim {
+  overflow: hidden;
 }
 .intro__animation .animation__product {
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 100%;
-  transition: 0.6s;
+  transition: 1.2s;
   width: calc(100% + 360px);
   position: absolute;
-  top: 180px;
+  top: 160px;
   left: -180px;
   display: flex;
   gap: 2%;
+}
+.intro__animation .animation__product._hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, -120px);
+}
+.intro__animation .animation__product._anim-translate {
+  top: 0;
 }
 @media (max-width: 520px) {
   .intro__animation .animation__product {
@@ -915,10 +935,17 @@ main {
     width: calc(100% + 200px);
   }
 }
-.intro__animation .animation__item {
-  transition: 0.6s;
+.intro__animation .animation__items {
   display: flex;
-  height: fit-content;
+  justify-content: space-between;
+  gap: 2%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.intro__animation .animation__item {
+  transition: 1.2s;
+  display: flex;
   flex-direction: column;
   gap: 30px;
   width: 32%;
@@ -939,10 +966,30 @@ main {
     border-radius: 22px;
   }
 }
-.intro__animation .animation__item:nth-child(2) {
+.intro__animation .animation__item._anim-block-left._hide {
+  transform: translate(-60px, 120px);
+  opacity: 0;
+  visibility: hidden;
+}
+.intro__animation .animation__item._anim-block-main {
+  height: 100%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0) scale(1);
+}
+.intro__animation .animation__item._anim-block-main._anim-scale {
+  transform: translate(-50%, 0) scale(0.9);
+}
+.intro__animation .animation__item._anim-block-main._anim-translate {
+  transform: translate(-50%, 0px);
+  padding: 0;
+  left: 50%;
+  background: none;
+}
+.intro__animation .animation__item._anim-block-right._hide {
+  transform: translate(60px, 120px);
+  opacity: 0;
+  visibility: hidden;
 }
 .intro__animation .animation__item-pic {
   width: 100%;
@@ -954,6 +1001,10 @@ main {
   margin-top: auto;
   justify-content: space-between;
   gap: 0 30px;
+}
+.intro__animation .animation__item-group._hide {
+  opacity: 0;
+  visibility: hidden;
 }
 @media (max-width: 520px) {
   .intro__animation .animation__item-group {
@@ -1006,17 +1057,26 @@ main {
 }
 .intro__animation .animation__method {
   transition: 0.6s;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  width: 60%;
+  margin: 0px auto;
   opacity: 0;
   visibility: hidden;
   padding: 0 40px;
+  transform: translate(0, 30px);
 }
-@media (max-width: 550px) {
+@media (max-width: 520px) {
   .intro__animation .animation__method {
-    padding: 0 30px;
+    width: 70%;
   }
+}
+.intro__animation .animation__method._show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0px);
+}
+.intro__animation .animation__method._hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .intro__animation .animation__method-block {
   margin: 0px auto;
@@ -1033,6 +1093,27 @@ main {
 .intro__animation .animation__method-block:first-child {
   margin-bottom: 8px;
 }
+.intro__animation .animation__method-block._method-card._anim {
+  background: #111827;
+}
+.intro__animation .animation__method-block._method-card._anim .animation__method-title {
+  color: #DADADA;
+}
+.intro__animation .animation__method-block._method-card._anim .animation__method-fill {
+  fill: #DADADA;
+}
+.intro__animation .animation__method-block._method-crypto._anim {
+  background: #111827;
+}
+.intro__animation .animation__method-block._method-crypto._anim .animation__method-title {
+  color: #DADADA;
+}
+.intro__animation .animation__method-block._method-crypto._anim .animation__method-fill {
+  fill: #DADADA;
+}
+.intro__animation .animation__method-block._method-crypto._anim-scale {
+  transform: scale(0.9);
+}
 @media (max-width: 768px) {
   .intro__animation .animation__method-block {
     padding: 22px 38px;
@@ -1041,6 +1122,11 @@ main {
 @media (max-width: 550px) {
   .intro__animation .animation__method-block {
     padding: 14pX 24px;
+  }
+}
+@media (max-width: 425px) {
+  .intro__animation .animation__method-block {
+    padding: 10px 18px;
   }
 }
 .intro__animation .animation__method-title {
@@ -1057,6 +1143,11 @@ main {
 @media (max-width: 550px) {
   .intro__animation .animation__method-title {
     font-size: 18px;
+  }
+}
+@media (max-width: 550px) {
+  .intro__animation .animation__method-title {
+    font-size: 16px;
   }
 }
 .intro__animation .animation__method-group {
@@ -1077,14 +1168,36 @@ main {
     width: 30px;
   }
 }
+@media (max-width: 425px) {
+  .intro__animation .animation__method-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 340px) {
+  .intro__animation .animation__method-icon {
+    display: none;
+  }
+}
 .intro__animation .animation__crypto {
   padding: 0 40px;
   position: absolute;
-  bottom: 0;
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: 0.6s;
+  transition: 1.2s;
+  transform: translate(0, -20%);
+}
+.intro__animation .animation__crypto._show {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.intro__animation .animation__crypto._hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, -80%);
 }
 .intro__animation .animation__crypto-title {
   color: #111827;
@@ -1113,6 +1226,15 @@ main {
   align-items: center;
   transition: 0.6s;
   gap: 0 15px;
+}
+.intro__animation .animation__crypto-block._crypto-block._anim-scale {
+  transform: scale(0.9);
+}
+.intro__animation .animation__crypto-block._crypto-block._anim {
+  background: #111827;
+}
+.intro__animation .animation__crypto-block._crypto-block._anim .animation__crypto-name {
+  color: #DADADA;
 }
 .intro__animation .animation__crypto-block:not(:last-child) {
   margin-bottom: 12px;
@@ -1163,23 +1285,10 @@ main {
 .intro__animation .animation__payment {
   margin: 0px auto 32px;
   position: absolute;
-  top: 120px;
+  top: 0;
+  height: 100%;
   width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, 120px);
-  transition: 0.6s;
-  padding: 0 40px;
-}
-@media (max-width: 650px) {
-  .intro__animation .animation__payment {
-    top: 80px;
-  }
-}
-@media (max-width: 425px) {
-  .intro__animation .animation__payment {
-    top: 60px;
-  }
+  overflow: hidden;
 }
 .intro__animation .animation__payment-heading {
   display: flex;
@@ -1188,8 +1297,27 @@ main {
   gap: 0 20px;
 }
 .intro__animation .animation__payment-wrapper {
+  width: 100%;
+  padding: 0 40px;
   max-width: 595px;
   margin: 0px auto;
+  transition: 1.2s;
+  transform: translate(-50%, 120px);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.intro__animation .animation__payment-wrapper._show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.intro__animation .animation__payment-wrapper._hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -120px);
 }
 .intro__animation .animation__payment-title {
   color: #111827;
@@ -1280,21 +1408,41 @@ main {
   text-align: center;
   transition: 0.6s;
 }
+@media (max-width: 650px) {
+  .intro__animation .animation__payment-btn {
+    padding: 17px 22px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+.intro__animation .animation__payment-btn._anim-scale {
+  transform: scale(0.9);
+}
 .intro__animation .animation__confirming {
   position: absolute;
-  top: 50%;
+  top: 37%;
   transform: translate(0px, -50%);
   width: 100%;
 }
 .intro__animation .animation__confirming-wrapper {
   opacity: 0;
   visibility: hidden;
-  transition: 0.6s;
+  transition: 1.2s;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   transform: translateY(120px);
+}
+.intro__animation .animation__confirming-wrapper._show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.intro__animation .animation__confirming-wrapper._hide {
+  transform: translateY(-120px);
+  opacity: 0;
+  visibility: hidden;
 }
 .intro__animation .animation__confirming-text {
   font-weight: 400;
@@ -1311,17 +1459,27 @@ main {
 }
 .intro__animation .animation__success {
   position: absolute;
-  top: 50%;
+  top: 37%;
   transform: translate(0px, -50%);
   width: 100%;
 }
 .intro__animation .animation__success-wrapper {
-  transition: 0.6s;
+  transition: 1.2s;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   transform: translateY(120px);
+  opacity: 0;
+  visibility: hidden;
+}
+.intro__animation .animation__success-wrapper._show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.intro__animation .animation__success-wrapper._hide {
+  transform: translateY(-120px);
   opacity: 0;
   visibility: hidden;
 }
