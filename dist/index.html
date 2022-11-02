@@ -80,8 +80,14 @@
 						</div>
 					</div>
 					<div class="intro__animation animation`">
-						<img src="img/intro-bg.png" alt="" class="intro__animation-bg">
-						<img src="img/intro-bg-success.png" alt="" class="intro__animation-bg _animation-success-bg">
+						<picture>
+							<source srcset="img/intro-bg.webp" type="image/webp">
+							<img src="img/intro-bg.png" alt="" class="intro__animation-bg">
+						</picture>
+						<picture>
+							<source srcset="img/intro-bg-success.webp" type="image/webp">
+							<img src="img/intro-bg-success.png" alt="" class="intro__animation-bg _animation-success-bg">
+						</picture>
 						<div class="animation__wrapper">
 							<div class="animation__product">
 								<div class="animation__items">
@@ -143,13 +149,15 @@
 											</svg>
 											<svg width="41" height="25" viewBox="0 0 41 25" fill="none"
 												xmlns="http://www.w3.org/2000/svg" class="animation__method-icon">
-												<path fill-rule="evenodd" clip-rule="evenodd" class="animation__method-fill" 
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													class="animation__method-fill"
 													d="M20.1132 21.6739C17.9853 23.4621 15.2251 24.5415 12.209 24.5415C5.47911 24.5415 0.0234375 19.1671 0.0234375 12.5374C0.0234375 5.90765 5.47911 0.533203 12.209 0.533203C15.2251 0.533203 17.9853 1.61268 20.1132 3.40084C22.241 1.61268 25.0012 0.533203 28.0174 0.533203C34.7473 0.533203 40.2029 5.90765 40.2029 12.5374C40.2029 19.1671 34.7473 24.5415 28.0174 24.5415C25.0012 24.5415 22.241 23.4621 20.1132 21.6739Z"
 													fill="#111827" />
 												<path fill-rule="evenodd" clip-rule="evenodd"
 													d="M20.1133 21.6739C22.7333 19.4721 24.3947 16.1959 24.3947 12.5374C24.3947 8.87887 22.7333 5.60262 20.1133 3.40084C22.2411 1.61268 25.0013 0.533203 28.0175 0.533203C34.7474 0.533203 40.203 5.90765 40.203 12.5374C40.203 19.1671 34.7474 24.5415 28.0175 24.5415C25.0013 24.5415 22.2411 23.4621 20.1133 21.6739Z"
 													fill="#9CA3AF" />
-												<path fill-rule="evenodd" clip-rule="evenodd" class="animation__method-fill"
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													class="animation__method-fill"
 													d="M20.1134 21.6733C22.7334 19.4715 24.3948 16.1953 24.3948 12.5368C24.3948 8.87836 22.7334 5.60213 20.1134 3.40035C17.4934 5.60213 15.832 8.87836 15.832 12.5368C15.832 16.1953 17.4934 19.4715 20.1134 21.6733Z"
 													fill="#111827" />
 											</svg>
@@ -160,14 +168,15 @@
 										<div class="animation__method-group">
 											<svg width="35" height="36" viewBox="0 0 35 36" fill="none"
 												xmlns="http://www.w3.org/2000/svg" class="animation__method-icon">
-												<path fill-rule="evenodd" clip-rule="evenodd" class="animation__method-fill"
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													class="animation__method-fill"
 													d="M34.7412 17.7715C34.7412 27.2984 27.0181 35.0215 17.4912 35.0215C7.9643 35.0215 0.241211 27.2984 0.241211 17.7715C0.241211 8.24457 7.9643 0.521484 17.4912 0.521484C27.0181 0.521484 34.7412 8.24457 34.7412 17.7715ZM21.636 11.3625C24.0356 12.1865 25.7908 13.4204 25.4465 15.7166C25.1964 17.398 24.2608 18.2112 23.0177 18.4959C24.7232 19.3803 25.3044 21.0588 24.7643 23.0883C23.7389 26.009 21.3014 26.2549 18.0595 25.6444L17.2723 28.784L15.3719 28.3116L16.1483 25.2141C15.6556 25.0922 15.1521 24.9617 14.6334 24.8226L13.8538 27.9352L11.9556 27.4628L12.7417 24.3168L8.91394 23.3547L9.85816 21.1869C9.85816 21.1869 11.2593 21.5568 11.2398 21.5298C11.778 21.6625 12.0173 21.3131 12.1115 21.0812L14.2447 12.5597C14.2685 12.1574 14.1288 11.6505 13.3589 11.4585C13.3882 11.438 11.9783 11.1166 11.9783 11.1166L12.484 9.09439L16.3172 10.0403L17.0968 6.92978L18.9961 7.40218L18.2327 10.4512C18.7438 10.5666 19.2571 10.6841 19.7563 10.8082L20.5142 7.77859L22.4146 8.25098L21.636 11.3625ZM17.0885 16.5512C18.383 16.8944 21.1999 17.6412 21.6908 15.6831C22.1917 13.6797 19.4551 13.0747 18.1151 12.7784C17.9633 12.7448 17.8294 12.7152 17.7201 12.688L16.7737 16.4693C16.8638 16.4916 16.9696 16.5196 17.0882 16.5511L17.0884 16.5511L17.0885 16.5512ZM15.6222 22.6392C17.1726 23.0476 20.5637 23.9409 21.1032 21.7832C21.6555 19.5771 18.3677 18.8423 16.7635 18.4838L16.7632 18.4837C16.5841 18.4437 16.426 18.4083 16.2966 18.3761L15.2527 22.5436C15.3588 22.5699 15.483 22.6026 15.6221 22.6392L15.6222 22.6392Z"
 													fill="#111827" />
 											</svg>
 											<svg width="36" height="36" viewBox="0 0 36 36" fill="none"
 												xmlns="http://www.w3.org/2000/svg" class="animation__method-icon">
-												<ellipse class="animation__method-fill" cx="17.9912" cy="17.7715" rx="17.25" ry="17.25"
-													fill="#111827" />
+												<ellipse class="animation__method-fill" cx="17.9912" cy="17.7715"
+													rx="17.25" ry="17.25" fill="#111827" />
 												<path fill-rule="evenodd" clip-rule="evenodd"
 													d="M10.4551 18.474L18.1928 23.0482V5.63477L10.4551 18.474Z"
 													fill="white" />
@@ -272,18 +281,18 @@
 						<div class="about__block-anim">
 							<div class="about__block-img">
 								<picture>
-									<source srcset="" type="image/webp">
+									<source srcset="img/about-img.webp" type="image/webp">
 									<img src="img/about-img.png" alt="" class="about__block-pic">
 								</picture>
 								<div class="about-img-bg">
 									<picture>
-										<source srcset="" type="image/webp">
+										<source srcset="img/about-img-bg.webp" type="image/webp">
 										<img src="img/about-img-bg.png" alt="" class="about__block-pic">
 									</picture>
 								</div>
 								<div class="about-img-coin">
 									<picture>
-										<source srcset="" type="image/webp">
+										<source srcset="img/about-img-coin.webp" type="image/webp">
 										<img src="img/about-img-coin.png" alt="" class="about__block-pic">
 									</picture>
 								</div>
@@ -310,7 +319,7 @@
 					<div class="work__content container">
 						<div class="work__block">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/work-step-1.webp" type="image/webp">
 								<img src="img/work-step-1.png" alt="" class="work__block-img">
 							</picture>
 							<div class="work__block-text">
@@ -322,7 +331,7 @@
 						</div>
 						<div class="work__block">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/work-step-2.webp" type="image/webp">
 								<img src="img/work-step-2.png" alt="" class="work__block-img">
 							</picture>
 							<div class="work__block-text">
@@ -333,7 +342,7 @@
 						</div>
 						<div class="work__block">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/work-step-3.webp" type="image/webp">
 								<img src="img/work-step-3.png" alt="" class="work__block-img">
 							</picture>
 							<div class="work__block-text">
@@ -356,11 +365,11 @@
 					<div class="advantages__block">
 						<div class="advantages__block-pic">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/advantages-block-1.webp" type="image/webp">
 								<img src="img/advantages-block-1.png" alt="" class="advantages__block-img">
 							</picture>
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/advantages-block-2.webp" type="image/webp">
 								<img src="img/advantages-block-2.png" alt="" class="advantages__block-img">
 							</picture>
 						</div>
@@ -373,7 +382,7 @@
 					<div class="advantages__block _block-anim-1">
 						<div class="advantages__block-pic">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/advantages-block-3.webp" type="image/webp">
 								<img src="img/advantages-block-3.png" alt="" class="advantages__block-img">
 							</picture>
 						</div>
@@ -386,7 +395,7 @@
 					<div class="advantages__block _block-anim-2">
 						<div class="advantages__block-pic">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/advantages-block-4.webp" type="image/webp">
 								<img src="img/advantages-block-4.png" alt="" class="advantages__block-img">
 							</picture>
 						</div>
@@ -399,7 +408,7 @@
 					<div class="advantages__block _block-trigger">
 						<div class="advantages__block-pic">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/advantages-block-5.webp" type="image/webp">
 								<img src="img/advantages-block-5.png" alt="" class="advantages__block-img">
 							</picture>
 						</div>
@@ -440,7 +449,7 @@
 					<div class="features__col">
 						<div class="features__block">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/features-block-1.webp" type="image/webp">
 								<img src="img/features-block-1.png" alt="" class="features__block-img">
 							</picture>
 							<div class="features__block-text">
@@ -453,7 +462,7 @@
 						</div>
 						<div class="features__block">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/features-block-2.webp" type="image/webp">
 								<img src="img/features-block-2.png" alt="" class="features__block-img">
 							</picture>
 							<div class="features__block-text">
@@ -467,7 +476,7 @@
 					<div class="features__col">
 						<div class="features__block features__block-big">
 							<picture>
-								<source srcset="" type="image/webp">
+								<source srcset="img/features-block-3.webp" type="image/webp">
 								<img src="img/features-block-3.png" alt="" class="features__block-img">
 							</picture>
 							<div class="features__block-text">
@@ -559,9 +568,12 @@
                     <div class="footer__block-group">
                         <p class="footer__copyright">Copyright ExBi © 2022 - All Rights Reserved</p>
                         <nav class="footer__nav">
-                            <li class="footer__nav-item"><a href="" class="footer__nav-link">Legal</a></li>
-                            <li class="footer__nav-item"><a href="" class="footer__nav-link">Terms of Service</a></li>
-                            <li class="footer__nav-item"><a href="" class="footer__nav-link">Privacy Policy</a></li>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Legal</a></li>
+                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Terms of Service</a>
+                                </li>
+                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Privacy Policy</a></li>
+                            </ul>
                         </nav>
                     </div>
                     <div class="footer__block-group">

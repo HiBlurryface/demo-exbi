@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: "CormorantUpright", sans-serif;
 }
@@ -627,7 +628,7 @@ main {
   line-height: 24px;
   color: #6B7280;
 }
-.footer__nav {
+.footer__nav-list {
   display: flex;
   gap: 4px 16px;
   flex-wrap: wrap;
@@ -972,7 +973,7 @@ main {
   }
 }
 .intro__animation .animation__item._anim-block-left._hide {
-  transform: translate(-60px, 120px);
+  transform: translate(-60px, 240px);
   opacity: 0;
   visibility: hidden;
 }
@@ -992,7 +993,7 @@ main {
   background: none;
 }
 .intro__animation .animation__item._anim-block-right._hide {
-  transform: translate(60px, 120px);
+  transform: translate(60px, 240px);
   opacity: 0;
   visibility: hidden;
 }

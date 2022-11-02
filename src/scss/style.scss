@@ -255,7 +255,7 @@
 
                 &._anim-block-left {
                     &._hide {
-                        transform: translate(-60px, 120px);
+                        transform: translate(-60px, 240px);
                         opacity: 0;
                         visibility: hidden;
                     }
@@ -281,7 +281,7 @@
 
                 &._anim-block-right {
                     &._hide {
-                        transform: translate(60px, 120px);
+                        transform: translate(60px, 240px);
                         opacity: 0;
                         visibility: hidden;
                     }

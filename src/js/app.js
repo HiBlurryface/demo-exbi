@@ -26,7 +26,7 @@ $(document).ready(function () {
         $(this).parent().toggleClass('active')
         $('.footer__lang-dropdown').toggleClass('active');
     })
-    $('.footer__lang-menu').click(function() {
+    $('.footer__lang-menu').click(function () {
         console.log('da')
     })
     $('.footer__form-btn').click(function () {

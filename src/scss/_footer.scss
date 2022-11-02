@@ -72,6 +72,7 @@
         width: fit-content;
         transition: 0.6s;
         z-index: 3;
+
         // &:before {
         //     transition: 0.6s;
         //     position: absolute;
@@ -117,7 +118,7 @@
         &-dropdown {
             background: #D1D5DB;
             z-index: -1;
-            border-radius:50px;
+            border-radius: 50px;
             position: absolute;
             left: 0;
             width: 100%;
@@ -125,6 +126,7 @@
             display: flex;
             transition: 0.6s;
             height: 100%;
+
             &.active {
                 transition: 0.6s;
                 height: 168px;
@@ -298,9 +300,11 @@
     }
 
     &__nav {
-        display: flex;
-        gap: 4px 16px;
-        flex-wrap: wrap;
+        &-list {
+            display: flex;
+            gap: 4px 16px;
+            flex-wrap: wrap;
+        }
 
         &-item {
             list-style-type: none;
