@@ -1,5 +1,4 @@
 .footer {
-    opacity: 0;
     padding-bottom: 60px;
 
     &__row {
@@ -234,8 +233,8 @@
 
         &-input {
             width: 100%;
-            background: transparent;
-            border: 1px solid $mainDarkGrey;
+            background: #E5E7EB;
+            border: 1px solid #E5E7EB;
             padding: 16px 24px;
             border-radius: 32px;
             font-weight: 400;
@@ -266,8 +265,8 @@
         &-error {
             cursor: default;
             position: absolute;
-            right: 24px;
-            top: 16px;
+            bottom: -30px;
+            left: 0;
             font-weight: 400;
             font-size: 18px;
             line-height: 24px;
