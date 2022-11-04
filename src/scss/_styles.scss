@@ -103,6 +103,19 @@ body {
         }
     }
 }
+::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+
+    &-thumb {
+        background: #D1D5DB;
+        border-radius: 100px;
+    }
+
+    &-track {
+        background: transparent;
+    }
+}
 
 main {
     overflow-x: hidden;

@@ -152,6 +152,18 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 main {
   overflow-x: hidden;
 }
@@ -439,10 +451,11 @@ main {
   border-radius: 64px;
   width: 100%;
   height: 100%;
+  flex-direction: column;
 }
 .footer__block-complete.active {
   z-index: 100;
-  display: block;
+  display: flex;
 }
 @media (max-width: 1440px) {
   .footer__block-complete {
@@ -578,15 +591,24 @@ main {
     padding: 8px 0 14px;
   }
 }
+.footer__thank {
+  margin-top: auto;
+}
 .footer__thank-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px 0 26px;
+  position: absolute;
   width: 64px;
   height: 64px;
   background: #28776D;
   border-radius: 100px;
+}
+@media (max-width: 520px) {
+  .footer__thank-icon {
+    width: 48px;
+    height: 48px;
+  }
 }
 .footer__thank-title {
   text-align: right;
@@ -615,13 +637,13 @@ main {
 @media (max-width: 1440px) {
   .footer__thank-subtitle {
     font-size: 20px;
-    padding: 12px 0 18px;
+    padding: 12px 0 0;
   }
 }
 @media (max-width: 520px) {
   .footer__thank-subtitle {
     font-size: 16px;
-    padding: 8px 0 14px;
+    padding: 8px 0 0;
   }
 }
 .footer__form {
@@ -774,6 +796,14 @@ main {
 @media (max-width: 800px) {
   .cookies.cookies-out {
     bottom: -120px;
+  }
+}
+.cookies.hide {
+  bottom: -60px !important;
+}
+@media (max-width: 800px) {
+  .cookies.hide {
+    bottom: -120px !important;
   }
 }
 @media (max-width: 800px) {
@@ -2577,6 +2607,7 @@ main {
 @media (max-width: 1024px) {
   .join__container {
     padding: 70px 32px;
+    height: unset !important;
   }
 }
 @media (max-width: 425px) {
@@ -2725,17 +2756,6 @@ main {
   .popup__block {
     padding-right: 16px;
   }
-}
-.popup__block::-webkit-scrollbar {
-  width: 8px;
-  position: absolute;
-}
-.popup__block::-webkit-scrollbar-thumb {
-  background: #D1D5DB;
-  border-radius: 100px;
-}
-.popup__block::-webkit-scrollbar-track {
-  background: transparent;
 }
 .popup__block-heading {
   border-bottom: 1px solid #E5E7EB;

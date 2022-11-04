@@ -1946,7 +1946,6 @@
         background-image: url('../img/pattern.png');
         background-position: center;
         background-repeat: no-repeat;
-
         @media (max-width: 1620px) {
             padding: 140px 32px;
         }
@@ -1958,6 +1957,7 @@
 
         @media (max-width: 1024px) {
             padding: 70px 32px;
+            height: unset !important;
         }
 
         @media (max-width: 425px) {
@@ -2107,20 +2107,6 @@
 
         @media (max-width: 520px) {
             padding-right: 16px;
-        }
-
-        &::-webkit-scrollbar {
-            width: 8px;
-            position: absolute;
-
-            &-thumb {
-                background: #D1D5DB;
-                border-radius: 100px;
-            }
-
-            &-track {
-                background: transparent;
-            }
         }
 
         &-heading {

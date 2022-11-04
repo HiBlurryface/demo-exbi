@@ -69,9 +69,10 @@
             border-radius: 64px;
             width: 100%;
             height: 100%;
+            flex-direction: column;
             &.active {
                 z-index: 100;
-                display: block;
+                display: flex;
             }
             @media (max-width: 1440px) {
                 padding: 32px;
@@ -237,15 +238,20 @@
         }
     }
     &__thank {
+        margin-top: auto;
         &-icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0px 0 26px;
+            position: absolute;
             width: 64px;
             height: 64px;
             background: #28776D;
             border-radius: 100px;
+            @media (max-width: 520px) {
+                width: 48px;
+                height: 48px;
+            }
         }
         &-title {
             text-align: right;
@@ -274,12 +280,12 @@
 
             @media (max-width: 1440px) {
                 font-size: 20px;
-                padding: 12px 0 18px;
+                padding: 12px 0 0;
             }
 
             @media (max-width: 520px) {
                 font-size: 16px;
-                padding: 8px 0 14px;
+                padding: 8px 0 0;
             }
         }
     }
