@@ -63,42 +63,25 @@ $(function (scrollMagic) {
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 1100, offset: '-100', triggerHook: 0.8 })
         .setTween(".about__block-right", { translateY: 0, translateX: 0 })
-        // .addIndicators({ name: "3 (duration: 300)" })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 300, triggerHook: 0.5 })
         .setTween(".about__block-left", { translateX: 0 })
         .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 400, triggerHook: 1 })
-    //     .setTween(".about__block", { opacity: 1 })
-    //     .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 400, triggerHook: 1 })
-    //     .setTween(".work", { opacity: 1 })
-    //     .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".advantages", duration: 400, triggerHook: 1 })
-    //     .setTween(".advantages", { opacity: 1 })
-    //     .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages__content", duration: 400, triggerHook: 0.5 })
         .setTween("._block-anim-1", { translateY: 0 })
-        // .addIndicators({ name: "3 (duration: 300)" })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages__content", duration: 400, triggerHook: 0.5 })
         .setTween("._block-anim-2", { translateY: 0 })
-        // .addIndicators({ name: "3 (duration: 300)" })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: "._block-trigger", duration: 300, triggerHook: 0.5 })
         .setTween("._block-anim-2", { translateY: -120 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: "._block-trigger", duration: 300, triggerHook: 0.5 })
         .setTween("._block-anim-3", { translateY: -120 })
-        // .addIndicators({ name: "3 (duration: 300)" })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: "._block-trigger", duration: 300, triggerHook: 0.5 })
         .setTween("._block-anim-3", { borderRadius: 256 })
-        // .addIndicators({ name: "3 (duration: 300)" })
         .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".features", duration: 400, triggerHook: 1 })
-    //     .setTween(".features", { opacity: 1 })
-    //     .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".features__heading", duration: '180%', triggerHook: 1 })
         .setTween(".features__heading-title span:first-child", { translateX: 0 })
         .addTo(controller);
@@ -108,9 +91,6 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".features__block:last-child", duration: 300, offset: '320', triggerHook: 1 })
         .setTween(".features__col:last-child", { translateY: 0 })
         .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: 400, triggerHook: 1 })
-    //     .setTween(".join", { opacity: 1 })
-    //     .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: 350, triggerHook: 0.8 })
         .setTween(".join__wrapper", { maxWidth: '100%', paddingLeft: 0, paddingRight: 0 })
         .addTo(controller);
@@ -120,27 +100,18 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: 250, offset: 500, triggerHook: 0.8 })
         .setTween(".join__container", { height: '100vh' })
         .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".footer", duration: 400, triggerHook: 1 })
-    //     .setTween(".footer", { opacity: 1 })
-    //     .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: duration, offset: 900, triggerHook: 0.8 })
         .setTween(".join__wrapper", { maxWidth: '1760px', paddingLeft: padding, paddingRight: padding })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: duration, offset: 900, triggerHook: 0.8 })
         .setTween(".join__container", { borderRadius: borderRadius })
         .addTo(controller);
-    // controller = new ScrollMagic.Controller({
-    //     globalSceneOptions: {
-    //         triggerHook: 0.9,
-    //     }
-    // });
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: duration })
         .setTween(".work__wrapper", { maxWidth: '100%', paddingLeft: 0, paddingRight: 0 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 400 })
         .setTween(".work__container", { borderRadius: 0 })
         .addTo(controller);
-    // offset: 40
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 600, triggerHook: 0, })
         .setPin('.work')
         .setTween(".work__content", { translateX: translate })
@@ -154,7 +125,4 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages", duration: 400, triggerHook: 0.9 })
         .setTween(".work__container", { borderRadius: borderRadius })
         .addTo(controller);
-    // scrollbar.addListener(() => {
-    //     scene.refresh()
-    // })
 })

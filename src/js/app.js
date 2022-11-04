@@ -1,16 +1,5 @@
 $(document).ready(function () {
     // header
-    // if ( $(window).scrollTop() > 1 ) {
-    //     $('.header').addClass('active')
-    // }
-    // $(window).scroll(function () {
-    //     if ( $(window).scrollTop() > 1 ) {
-    //         $('.header').addClass('active')
-    //     } else {
-    //         $('.header').removeClass('active')
-    //     }
-    // })
-
     let scrollPrev = 0; 
     $(window).scroll(function () {
         var scrolled = $(window).scrollTop();

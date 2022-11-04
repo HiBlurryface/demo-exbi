@@ -106,16 +106,6 @@
         width: fit-content;
         transition: 0.6s;
         z-index: 3;
-
-        // &:before {
-        //     transition: 0.6s;
-        //     position: absolute;
-        //     content: ' ';
-        //     background: #D1D5DB;
-        //     height: 0px;
-        //     top: 50px;
-        //     width: 100%;
-        // }
         @media (max-width: 1024px) {
             margin-top: 20px;
         }
