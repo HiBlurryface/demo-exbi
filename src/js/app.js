@@ -36,14 +36,6 @@ $(document).ready(function () {
         $('.header__row').removeClass('active');
         $('body').removeClass('lock');
     })
-
-    // $('.intro__arrow').click(function () {
-    //     let stats = document.querySelector('.stats');
-    //     let yOffset = -75;
-    //     let y = stats.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    //     window.scrollTo({ top: y, behavior: 'smooth' });
-    // })
-
     $('.header__nav-link').click(function() {
         let blockAnchor = $(this).attr('href').replace('#','.')
         console.log(blockAnchor)
@@ -56,14 +48,6 @@ $(document).ready(function () {
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
     })
-
-    // $('.test').click(function () {
-    //     let stats = document.querySelector('.about');
-    //     let yOffset = -75;
-    //     let y = stats.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    //     window.scrollTo({ top: y, behavior: 'smooth' });
-    // })
-
     // footer
     $('.footer__lang-btn').click(function () {
         $(this).toggleClass('active')
@@ -78,11 +62,38 @@ $(document).ready(function () {
             $('.footer__form-input').addClass('error')
         } else {
             $('.footer__form-input').removeClass('error')
+            $('.footer__block-complete').addClass('active')
         }
     })
     $('.footer__form-input').blur(function () {
         if ($('.footer__form-input').val().length > 1) {
             $('.footer__form-input').removeClass('error')
         }
+    })
+    // $('#terms-btn').click(function() {
+    //     $('#terms-popup').fadeIn(300);
+    //     $('body').css({
+    //         'overflow':'hidden'
+    //     })
+    //     // $('#terms-popup').addClass('active');
+    // })
+    // $('.popup__close').click(function() {
+    //     $('#terms-popup').fadeOut(300);
+    //     $('body').css({
+    //         'overflow':'unset'
+    //     })
+    // })
+    $('.popup__open').click(function() {
+        let popup = $(this).data('popup');
+        $('#'+popup).fadeIn(300);
+        $('body').css({
+            'overflow':'hidden'
+        })
+    })
+    $('.popup__close').click(function() {
+        $('.popup').fadeOut(300);
+        $('body').css({
+            'overflow':'unset'
+        })
     })
 })

@@ -1,5 +1,5 @@
 .footer {
-    padding-bottom: 60px;
+    padding-bottom: 32px;
 
     &__row {
         display: flex;
@@ -31,6 +31,7 @@
     }
 
     &__block {
+        position: relative;
         width: 100%;
         background: $mainLightGrey;
         max-width: 544px;
@@ -57,6 +58,25 @@
             display: flex;
             gap: 16px 32px;
             flex-wrap: wrap;
+        }
+        &-complete {
+            display: none;
+            background: $mainLightGrey;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 64px;
+            border-radius: 64px;
+            width: 100%;
+            height: 100%;
+            &.active {
+                z-index: 100;
+                display: block;
+            }
+            @media (max-width: 1440px) {
+                padding: 32px;
+                border-radius: 32px;
+            }
         }
     }
 
@@ -216,7 +236,53 @@
             }
         }
     }
+    &__thank {
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 0 26px;
+            width: 64px;
+            height: 64px;
+            background: #28776D;
+            border-radius: 100px;
+        }
+        &-title {
+            text-align: right;
 
+            @extend %section-title;
+
+            @media (max-width: 1440px) {
+                font-size: 34px;
+            }
+
+            @media (max-width: 520px) {
+                font-size: 22px;
+            }
+        }
+
+        &-subtitle {
+            text-align: right;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: $mainDarkGrey;
+            padding: 26px 0 0;
+
+            @media (max-width: 1440px) {
+                font-size: 20px;
+                padding: 12px 0 18px;
+            }
+
+            @media (max-width: 520px) {
+                font-size: 16px;
+                padding: 8px 0 14px;
+            }
+        }
+    }
     &__form {
         display: flex;
         gap: 8px;
@@ -272,6 +338,19 @@
             line-height: 24px;
             color: #e55012;
             display: none;
+            @media (max-width: 1440px) {
+                bottom: -25px;
+            }
+            @media (max-width: 520px) {
+                right: 0;
+                bottom: -48px;
+                left: unset;
+            }
+            @media (max-width: 520px) {
+                width: 50%;
+                text-align: right;
+                bottom: -60px;
+            }
         }
 
         &-btn {

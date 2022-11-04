@@ -32,17 +32,28 @@
                     </div>
                 </div>
                 <div class="footer__block">
-                    <div class="footer__text">
-                        <h2 class="footer__text-title">Subscribe <br>to our newsletter</h2>
-                        <p class="footer__text-subtitle">stay in touch with our latest Updates</p>
-                    </div>
-                    <form action="" class="footer__form">
-                        <div class="footer__form-wrapper">
-                            <input type="text" class="footer__form-input" placeholder="Enter your email">
-                            <span class="footer__form-error">Wrong email address</span>
+                    <div class="footer__block-subscribe">
+                        <div class="footer__text">
+                            <h2 class="footer__text-title">Subscribe <br>to our newsletter</h2>
+                            <p class="footer__text-subtitle">stay in touch with our latest Updates</p>
                         </div>
-                        <button type="submit" class="footer__form-btn">Subscribe</button>
-                    </form>
+                        <form action="" class="footer__form">
+                            <div class="footer__form-wrapper">
+                                <input type="text" class="footer__form-input" placeholder="Enter your email">
+                                <span class="footer__form-error">Wrong email address</span>
+                            </div>
+                            <button type="button" class="footer__form-btn">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="footer__block-complete">
+                        <div class="footer__thank-icon">
+                            <img src="img/success-icon.svg" alt="">
+                        </div>
+                        <div class="footer__thank">
+                            <h2 class="footer__thank-title">Thanks for <br> subscribing!</h2>
+                            <p class="footer__thank-subtitle">you will receive our first newsletter issue soon!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer__row">
@@ -51,10 +62,10 @@
                         <p class="footer__copyright">Copyright ExBi © 2022 - All Rights Reserved</p>
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
-                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Legal</a></li>
-                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Terms of Service</a>
+                                <li class="footer__nav-item"><a class="footer__nav-link popup__open" data-popup="legal">Legal</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-link popup__open" data-popup="terms">Terms of Service</a>
                                 </li>
-                                <li class="footer__nav-item"><a href="" class="footer__nav-link">Privacy Policy</a></li>
+                                <li class="footer__nav-item"><a class="footer__nav-link popup__open" data-popup="privacy">Privacy Policy</a></li>
                             </ul>
                         </nav>
                     </div>
