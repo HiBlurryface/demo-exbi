@@ -89,6 +89,7 @@ $(document).ready(function () {
         $('body').css({
             'overflow':'hidden'
         })
+        $('.popup__block').scrollTop(0)
     })
     $('.popup__close').click(function() {
         $('.popup').fadeOut(300);

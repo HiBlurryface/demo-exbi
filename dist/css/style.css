@@ -719,6 +719,7 @@ main {
   flex-wrap: wrap;
 }
 .footer__nav-item {
+  cursor: pointer;
   list-style-type: none;
 }
 .footer__nav-link {
