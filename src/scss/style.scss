@@ -975,10 +975,6 @@
             }
         }
 
-        @media (max-width: 1024px) {
-            border-radius: 32px;
-        }
-
         &-anim {
             position: relative;
             width: 100%;
@@ -1108,8 +1104,11 @@
             }
 
             @media (max-width: 1024px) {
-                padding: 24px;
                 transform: translate(20%, 0);
+            }
+            @media (max-width: 768px) {
+                padding: 32px;
+                border-radius: 32px;
             }
         }
 
@@ -1242,7 +1241,7 @@
         }
 
         @media (max-width: 425px) {
-            padding: 20px;
+            padding: 32px 20px;
             border-radius: 20px;
         }
     }
@@ -1946,6 +1945,7 @@
         background-image: url('../img/pattern.png');
         background-position: center;
         background-repeat: no-repeat;
+
         @media (max-width: 1620px) {
             padding: 140px 32px;
         }
@@ -2057,8 +2057,8 @@
         }
 
         @media (max-width: 520px) {
-            padding: 16px 0 16px 16px;
-            border-radius: 16px;
+            padding: 22px 0 22px 22px;
+            border-radius: 22px;
         }
     }
 
@@ -2106,7 +2106,7 @@
         overflow-y: scroll;
 
         @media (max-width: 520px) {
-            padding-right: 16px;
+            padding-right: 22px;
         }
 
         &-heading {
@@ -2121,9 +2121,11 @@
             color: $mainBlack;
             text-transform: uppercase;
             padding-right: 50px;
+
             @media (max-width: 768px) {
                 font-size: 62px;
             }
+
             @media (max-width: 768px) {
                 font-size: 46px;
             }

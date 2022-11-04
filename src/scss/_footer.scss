@@ -59,8 +59,15 @@
             gap: 16px 32px;
             flex-wrap: wrap;
         }
+        &-subscribe {
+            transition: 0.4s;
+
+            &.hide {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
         &-complete {
-            display: none;
             background: $mainLightGrey;
             position: absolute;
             top: 0;
@@ -69,11 +76,18 @@
             border-radius: 64px;
             width: 100%;
             height: 100%;
+            display: flex;
             flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+
             &.active {
+                opacity: 1;
+                visibility: visible;
                 z-index: 100;
-                display: flex;
             }
+
             @media (max-width: 1440px) {
                 padding: 32px;
                 border-radius: 32px;
@@ -237,8 +251,10 @@
             }
         }
     }
+
     &__thank {
         margin-top: auto;
+
         &-icon {
             display: flex;
             align-items: center;
@@ -248,11 +264,13 @@
             height: 64px;
             background: #28776D;
             border-radius: 100px;
+
             @media (max-width: 520px) {
                 width: 48px;
                 height: 48px;
             }
         }
+
         &-title {
             text-align: right;
 
@@ -289,6 +307,7 @@
             }
         }
     }
+
     &__form {
         display: flex;
         gap: 8px;
@@ -344,14 +363,17 @@
             line-height: 24px;
             color: #e55012;
             display: none;
+
             @media (max-width: 1440px) {
                 bottom: -25px;
             }
+
             @media (max-width: 520px) {
                 right: 0;
                 bottom: -48px;
                 left: unset;
             }
+
             @media (max-width: 520px) {
                 width: 50%;
                 text-align: right;

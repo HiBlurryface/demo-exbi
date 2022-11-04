@@ -65,7 +65,10 @@ $(document).ready(function () {
             $('.footer__form-input').addClass('error')
         } else {
             $('.footer__form-input').removeClass('error')
-            $('.footer__block-complete').addClass('active')
+            $('.footer__block-subscribe').addClass('hide')
+            setTimeout(function() {
+                $('.footer__block-complete').addClass('active')
+            }, 400)
         }
     })
     $('.footer__form-input').blur(function () {
