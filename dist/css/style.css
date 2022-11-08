@@ -1088,7 +1088,7 @@ main {
   position: relative;
 }
 .intro__animation .animation__item {
-  transition: 1.2s;
+  transition: 0.6s;
   display: flex;
   flex-direction: column;
   gap: 30px;

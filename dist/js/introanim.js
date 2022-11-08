@@ -17,9 +17,15 @@ $(document).ready(function () {
             $('._anim-block-main').addClass('_anim-scale')
         }, 2000)
         setTimeout(function () {
+            $('._anim-block-left').css({
+                'transition': '0.6s'
+            })
             $('._anim-block-left').addClass('_hide')
         }, 3000)
         setTimeout(function () {
+            $('._anim-block-left').css({
+                'transition': '1.2s'
+            })
             $('._anim-block-right').addClass('_hide')
         }, 3000)
         setTimeout(function () {
@@ -45,32 +51,32 @@ $(document).ready(function () {
             $('.animation__wrapper').addClass('_anim')
             $('.animation__method,.animation__product').addClass('_hide')
             $('._anim-block-main').addClass('_hide')
-        }, 7000)
+        }, 6500)
 
         setTimeout(function () {
             $('.animation__crypto').addClass('_show')
-        }, 8000)
+        }, 7000)
         setTimeout(function () {
             $('._crypto-block').addClass('_anim');
-        }, 9000)
+        }, 8500)
         setTimeout(function () {
             $('._crypto-block').addClass('_anim-scale');
-        }, 10000)
+        }, 9000)
         setTimeout(function () {
             $('._crypto-block').removeClass('_anim-scale')
-        }, 10500)
+        }, 9500)
         setTimeout(function () {
             $('.animation__crypto').addClass('_hide');
-        }, 11000)
+        }, 10000)
 
         setTimeout(function () {
             $('.animation__payment-wrapper').addClass('_show')
-        }, 12000)
+        }, 11000)
         setTimeout(function () {
             $('.animation__payment-wrapper').css({
                 'top': translate
             })
-        }, 13500)
+        }, 13000)
         setTimeout(function () {
             $('.animation__payment-btn').addClass('_anim-scale')
         }, 15000)
@@ -79,14 +85,14 @@ $(document).ready(function () {
         }, 15500)
         setTimeout(function () {
             $('.animation__payment-wrapper').addClass('_hide')
-        }, 16500)
+        }, 16000)
 
         setTimeout(function () {
             $('.animation__confirming-wrapper').addClass('_show')
-        }, 17500)
+        }, 17000)
         setTimeout(function () {
             $('.animation__confirming-wrapper').addClass('_hide')
-        }, 19500)
+        }, 18500)
 
         setTimeout(function () {
             $('._animation-success-bg').css({
@@ -94,14 +100,14 @@ $(document).ready(function () {
                 'visibility': 'visible'
             })
             $('.animation__success-wrapper').addClass('_show')
-        }, 21500)
+        }, 19500)
         setTimeout(function () {
             $('._animation-success-bg').css({
                 'opacity': '0',
                 'visibility': 'hidden'
             })
             $('.animation__success-wrapper').addClass('_hide')
-        }, 23500)
+        }, 21000)
         setTimeout(function () {
             $('._anim-block-main').removeClass('_anim-scale')
             $('._anim-block-main').removeClass('_anim-translate')
@@ -111,7 +117,13 @@ $(document).ready(function () {
             $('._anim-block-right').removeClass('_hide')
             $('._anim-block-right').addClass('_show-block')
             $('.animation__product').removeClass('_anim-translate')
-        }, 24500)
+            $('._anim-block-left').css({
+                'transition': '1.2s'
+            })
+            $('._anim-block-right').css({
+                'transition': '1.2s'
+            })
+        }, 21500)
         setTimeout(function () {
             $('div').removeClass('_anim')
             $('div').removeClass('_anim-scale')
@@ -121,10 +133,10 @@ $(document).ready(function () {
             $('.animation__payment-wrapper').css({
                 'top': '0'
             })
-        }, 25500)
+        }, 22000)
         setTimeout(function() {
             introAnim()
-        }, 26000)
+        }, 22500)
     }
     setTimeout(function() {
         introAnim()
