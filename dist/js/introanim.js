@@ -100,14 +100,14 @@ $(document).ready(function () {
                 'visibility': 'visible'
             })
             $('.animation__success-wrapper').addClass('_show')
-        }, 19500)
+        }, 20000)
         setTimeout(function () {
             $('._animation-success-bg').css({
                 'opacity': '0',
                 'visibility': 'hidden'
             })
             $('.animation__success-wrapper').addClass('_hide')
-        }, 21000)
+        }, 21500)
         setTimeout(function () {
             $('._anim-block-main').removeClass('_anim-scale')
             $('._anim-block-main').removeClass('_anim-translate')
@@ -123,7 +123,7 @@ $(document).ready(function () {
             $('._anim-block-right').css({
                 'transition': '1.2s'
             })
-        }, 21500)
+        }, 22000)
         setTimeout(function () {
             $('div').removeClass('_anim')
             $('div').removeClass('_anim-scale')
@@ -133,10 +133,10 @@ $(document).ready(function () {
             $('.animation__payment-wrapper').css({
                 'top': '0'
             })
-        }, 22000)
+        }, 22500)
         setTimeout(function() {
             introAnim()
-        }, 22500)
+        }, 23000)
     }
     setTimeout(function() {
         introAnim()
