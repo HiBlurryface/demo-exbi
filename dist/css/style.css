@@ -1797,11 +1797,6 @@ main {
   object-fit: cover;
   height: 100%;
 }
-@media (max-width: 1024px) {
-  .about__block-left {
-    transform: translate(-20%, 0);
-  }
-}
 @media (max-width: 768px) {
   .about__block-left {
     border-radius: 32px;
@@ -1819,11 +1814,6 @@ main {
 @media (max-width: 1220px) {
   .about__block-right {
     padding: 48px;
-  }
-}
-@media (max-width: 1024px) {
-  .about__block-right {
-    transform: translate(20%, 0);
   }
 }
 @media (max-width: 768px) {

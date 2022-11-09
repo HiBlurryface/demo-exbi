@@ -1080,9 +1080,9 @@
         }
 
         &-left {
-            @media (max-width: 1024px) {
-                transform: translate(-20%, 0);
-            }
+            // @media (max-width: 1024px) {
+            //     transform: translate(-20%, 0);
+            // }
             @media (max-width: 768px) {
                 border-radius: 32px;
             }
@@ -1100,9 +1100,9 @@
                 padding: 48px;
             }
 
-            @media (max-width: 1024px) {
-                transform: translate(20%, 0);
-            }
+            // @media (max-width: 1024px) {
+            //     transform: translate(20%, 0);
+            // }
             @media (max-width: 768px) {
                 padding: 32px;
                 border-radius: 32px;

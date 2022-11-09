@@ -62,14 +62,14 @@ $(function (scrollMagic) {
         .setTween(".title-to-right", 0.5, { translateX: 0, opacity: 1 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 1100, offset: '-100', triggerHook: 0.8 })
-        .setTween(".about__block-right", { translateY: 0, translateX: 0 })
+        .setTween(".about__block-right", { translateY: 0 })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 600, triggerHook: 0.8 })
+    var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 1100, triggerHook: 0.8 })
         .setTween(".about-img-coin", { right: '-95%' })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 300, triggerHook: 0.5 })
-        .setTween(".about__block-left", { translateX: 0 })
-        .addTo(controller);
+    // var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 300, triggerHook: 0.5 })
+    //     .setTween(".about__block-left", { translateX: 0 })
+    //     .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages__content", duration: 400, triggerHook: 0.5 })
         .setTween("._block-anim-1", { translateY: 0 })
         .addTo(controller);

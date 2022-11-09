@@ -1,8 +1,13 @@
 $(document).ready(function () {
+    let w = window.innerWidth;
     let translate = 0;
     let paymentHeight = $('.animation__payment').height();
     let paymentWrapperHeight = $('.animation__payment-wrapper').height();
-    translate = paymentHeight - paymentWrapperHeight;
+    if ( w > 1320 ) {
+        translate = paymentHeight - paymentWrapperHeight - 120;
+    } else {
+        translate = paymentHeight - paymentWrapperHeight;
+    }
     function introAnim() {
         setTimeout(function () {
             $('._anim-block-left').removeClass('_show-block')
