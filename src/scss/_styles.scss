@@ -98,8 +98,8 @@ body {
     overflow-x: hidden;
     font-family: 'CormorantUpright', sans-serif;
     &.lock {
-        @media (max-width: 425px) {
-            overflow: hidden;
+        @media (max-width: 1220px) {
+            overflow: hidden !important;
         }
     }
 }

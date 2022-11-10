@@ -6,7 +6,9 @@ $(function (scrollMagic) {
     var translate = -300;
     let duration = 400;
     let blockWidth = $('.work__block').width();
-    console.log(blockWidth)
+    let titleLeft = $('.features__heading-title').width() - $('.features__heading-title span:first-child').width();
+    let titleRight = -($('.features__heading-title').width() - $('.features__heading-title span:last-child').width());
+    let featuresCol = $('.features__content').height() - $('.features__wrapper').height();
     padding = 32;
     if (w > 2250) {
         duration = 600;
@@ -64,7 +66,7 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 1100, offset: '-100', triggerHook: 0.8 })
         .setTween(".about__block-right", { translateY: 0 })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 1100, triggerHook: 0.8 })
+    var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: '100%', triggerHook: 0.8 })
         .setTween(".about-img-coin", { right: '-95%' })
         .addTo(controller);
     // var scene = new ScrollMagic.Scene({ triggerElement: ".about", duration: 300, triggerHook: 0.5 })
@@ -86,13 +88,16 @@ $(function (scrollMagic) {
         .setTween("._block-anim-3", { borderRadius: 256 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".features__heading", duration: '180%', triggerHook: 1 })
-        .setTween(".features__heading-title span:first-child", { translateX: 0 })
+        .setTween(".features__heading-title span:first-child", { translateX: titleLeft })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".features__heading", duration: '180%', triggerHook: 1 })
-        .setTween(".features__heading-title span:last-child", { translateX: 0 })
+        .setTween(".features__heading-title span:last-child", { translateX: titleRight })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".features__block:last-child", duration: 300, offset: '320', triggerHook: 1 })
-        .setTween(".features__col:last-child", { translateY: 0 })
+    var scene = new ScrollMagic.Scene({ triggerElement: ".features__content", duration: '100%', triggerHook: 0 })
+        .setTween(".features__col:first-child", { translateY: 0 })
+        .addTo(controller);
+    var scene = new ScrollMagic.Scene({ triggerElement: ".features__content", duration: '100%', triggerHook: 0 })
+        .setTween(".features__col:last-child", { translateY: featuresCol })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: 350, triggerHook: 0.8 })
         .setTween(".join__wrapper", { maxWidth: '100%', paddingLeft: 0, paddingRight: 0 })
