@@ -3,7 +3,7 @@ $(function (scrollMagic) {
     var w = window.innerWidth;
     var borderRadius = 0;
     var padding = 0;
-    var translate = -300;
+    var translate;
     let duration = 400;
     let blockWidth = $('.work__block').width();
     let titleLeft = $('.features__heading-title').width() - $('.features__heading-title span:first-child').width();
@@ -23,18 +23,25 @@ $(function (scrollMagic) {
         padding = 20;
         borderRadius = 32;
     }
-    if (w <= 1888) {
-        translate = -1888 + w - 300;
-    }
-    if (w <= 1440) {
-        translate = -1824 + w - 300;
-    }
-    if (w <= 768) {
-        translate = -1760 + w - 514 + 320 + 320 + 320 + 32;
-    }
-    if (w <= 425) {
-        translate = -1760 + w - 100 + 256 + 256 + 256 + 52;
-    }
+    // translate =  1760 - $('.work__block').innerWidth() * 3 - 130;
+    // console.log(translate)
+
+    
+    // if (w <= 1888) {
+    //     translate = -1888 + w - 300;
+    // }
+    // if (w <= 1888) {
+    //     translate = -1888 + w - 300;
+    // }
+    // if (w <= 1440) {
+    //     translate = -1824 + w - 300;
+    // }
+    // if (w <= 768) {
+    //     translate = -1760 + w - 514 + 320 + 320 + 320 + 32;
+    // }
+    // if (w <= 425) {
+    //     translate = -1760 + w - 100 + 256 + 256 + 256 + 52;
+    // }
     var controller = new ScrollMagic.Controller({
         // refreshInterval: 0,
     });
@@ -120,11 +127,11 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 400 })
         .setTween(".work__container", { borderRadius: 0 })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 600, triggerHook: 0, })
-        .setPin('.work')
-        .setTween(".work__content", { translateX: translate })
-        .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 600, triggerHook: 0, })
+    // var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 1200, triggerHook: 0, })
+    //     .setPin('.work')
+    //     .setTween(".work__content", { translateX: translate })
+    //     .addTo(controller);
+    var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 1200, triggerHook: 0, })
         .setTween(".work__title", { translateX: 300 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages", duration: duration, triggerHook: 0.9 })
