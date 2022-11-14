@@ -23,12 +23,25 @@ $(function (scrollMagic) {
         padding = 20;
         borderRadius = 32;
     }
-    // translate =  1760 - $('.work__block').innerWidth() * 3 - 130;
-    // console.log(translate)
+    // 2560px  = 1518px
+    // 1600px = 1806px;
+    let arr = {
+        'clientWidth': '1200',
+        'top': '12'
+    }
+    let workContent = $('.work__block').innerWidth() * 3 + 64;
+    translate = -(workContent - $('.work__container').innerWidth());
+    if (w <= 1760) {
+        translate = -(workContent - $('.work__slider').innerWidth() - 64);
+    }
 
-    
-    // if (w <= 1888) {
-    //     translate = -1888 + w - 300;
+
+    // for( let element in slider ) {
+    //     console.log(element)
+    // }
+    // console.log(arr['top'])
+    // for ( let element in arr ) {
+    //     console.log(element[top])
     // }
     // if (w <= 1888) {
     //     translate = -1888 + w - 300;
@@ -41,7 +54,8 @@ $(function (scrollMagic) {
     // }
     // if (w <= 425) {
     //     translate = -1760 + w - 100 + 256 + 256 + 256 + 52;
-    // }
+    // }   
+    console.log(translate)
     var controller = new ScrollMagic.Controller({
         // refreshInterval: 0,
     });
@@ -125,19 +139,21 @@ $(function (scrollMagic) {
         .setTween(".work__wrapper", { maxWidth: '100%', paddingLeft: 0, paddingRight: 0 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 400 })
-        .setTween(".work__container", { borderRadius: 0 })
+        .setTween(".work__bg", { borderRadius: 0 })
         .addTo(controller);
-    // var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 1200, triggerHook: 0, })
-    //     .setPin('.work')
-    //     .setTween(".work__content", { translateX: translate })
-    //     .addTo(controller);
+    if (w > 1440) {
+        var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 1200, triggerHook: 0, })
+            .setPin('.work')
+            .setTween(".work__content", { translateX: translate })
+            .addTo(controller);
+    }
     var scene = new ScrollMagic.Scene({ triggerElement: ".work", duration: 1200, triggerHook: 0, })
         .setTween(".work__title", { translateX: 300 })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages", duration: duration, triggerHook: 0.9 })
-        .setTween(".work__wrapper", { maxWidth: '1760px', paddingLeft: padding, paddingRight: padding })
+        .setTween(".work__bg", { maxWidth: '1696px', paddingLeft: padding, paddingRight: padding })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".advantages", duration: 400, triggerHook: 0.9 })
-        .setTween(".work__container", { borderRadius: borderRadius })
+        .setTween(".work__bg", { borderRadius: borderRadius })
         .addTo(controller);
 })
