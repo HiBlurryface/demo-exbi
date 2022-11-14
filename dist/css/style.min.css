@@ -224,6 +224,7 @@ main {
   transition: 0.5s;
 }
 .header__row {
+  overflow: hidden;
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -2082,7 +2083,7 @@ main {
 }
 @media (max-width: 580px) {
   .work__container {
-    padding: 24px 20px 20px;
+    padding: 24px 20px 40px;
   }
 }
 .work__slider {
@@ -2098,7 +2099,7 @@ main {
 }
 @media (max-width: 425px) {
   .work__slider {
-    padding-bottom: 20px;
+    gap: 20px;
   }
 }
 .work__content {
