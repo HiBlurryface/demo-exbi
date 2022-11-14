@@ -988,6 +988,7 @@ main {
 @media (max-width: 1600px) {
   .intro__heading {
     max-width: 600px;
+    padding-top: 16px;
   }
 }
 .intro__heading-title {
@@ -2019,6 +2020,12 @@ main {
   margin: 0px auto;
   padding: 0 32px;
 }
+@media (max-width: 1440px) {
+  .work__wrapper {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}
 @media (max-width: 425px) {
   .work__wrapper {
     padding: 0 20px;
@@ -2040,7 +2047,7 @@ main {
 }
 @media (max-width: 1440px) {
   .work__bg {
-    border-radius: 64px;
+    border-radius: 0px !important;
   }
 }
 @media (max-width: 768px) {
@@ -2075,7 +2082,7 @@ main {
 }
 @media (max-width: 580px) {
   .work__container {
-    padding: 20px 20px 40px;
+    padding: 24px 20px 20px;
   }
 }
 .work__slider {
@@ -2086,6 +2093,12 @@ main {
 @media (max-width: 1440px) {
   .work__slider {
     flex-direction: column;
+    gap: 32px;
+  }
+}
+@media (max-width: 425px) {
+  .work__slider {
+    padding-bottom: 20px;
   }
 }
 .work__content {
@@ -2235,8 +2248,23 @@ main {
 .advantages__heading {
   padding-bottom: 48px;
 }
+@media (max-width: 768px) {
+  .advantages__heading {
+    padding-bottom: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages__heading {
+    padding-bottom: 20px;
+  }
+}
 .advantages__heading-subtitle {
   padding-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .advantages__heading-subtitle {
+    padding-bottom: 8px;
+  }
 }
 .advantages__heading-title span {
   color: #28776D;
@@ -2738,10 +2766,16 @@ main {
 
 .join {
   margin-bottom: 120px;
+  height: 100vh;
 }
 @media (max-width: 1440px) {
   .join {
     margin-bottom: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .join {
+    height: unset !important;
   }
 }
 @media (max-width: 768px) {
@@ -2750,21 +2784,14 @@ main {
   }
 }
 .join__wrapper {
-  max-width: 1760px;
-  margin: 0px auto;
-  padding: 0 32px;
-}
-@media (max-width: 425px) {
-  .join__wrapper {
-    padding: 0 20px;
-  }
+  height: 100%;
 }
 .join__container {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 160px 32px;
-  border-radius: 112px;
   background-color: #28776D;
   background-image: url("../img/pattern.png");
   background-position: center;
@@ -2778,7 +2805,6 @@ main {
 @media (max-width: 1440px) {
   .join__container {
     padding: 96px 32px;
-    border-radius: 64px;
   }
 }
 @media (max-width: 1024px) {
@@ -2790,7 +2816,6 @@ main {
 @media (max-width: 425px) {
   .join__container {
     padding: 40px 20px;
-    border-radius: 20px;
   }
 }
 .join__title {

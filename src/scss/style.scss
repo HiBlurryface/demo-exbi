@@ -61,6 +61,7 @@
 
         @media (max-width: 1600px) {
             max-width: 600px;
+            padding-top: 16px;
         }
 
         // @media (max-width: 1250px) {
@@ -1236,7 +1237,10 @@
         max-width: 1760px;
         margin: 0px auto;
         padding: 0 32px;
-
+        @media (max-width: 1440px) {
+            max-width: 100% !important;
+            padding: 0 !important;
+        }
         @media (max-width: 425px) {
             padding: 0 20px;
         }
@@ -1257,7 +1261,8 @@
         border-radius: 112px;
 
         @media (max-width: 1440px) {
-            border-radius: 64px;
+            border-radius: 0px !important;
+            
         }
 
         @media (max-width: 768px) {
@@ -1291,7 +1296,7 @@
         }
 
         @media (max-width: 580px) {
-            padding: 20px 20px 40px;
+            padding: 24px 20px 20px;
         }
 
         // @media (max-width: 425px) {
@@ -1305,6 +1310,10 @@
         width: 100%;
         @media (max-width: 1440px) {
             flex-direction: column;
+            gap: 32px;
+        }
+        @media (max-width: 425px) {
+            padding-bottom: 20px;
         }
     }
     &__content {
@@ -1487,10 +1496,19 @@
 
     &__heading {
         padding-bottom: 48px;
+        @media (max-width: 768px) {
+            padding-bottom: 32px;
+        }
+        @media (max-width: 768px) {
+            padding-bottom: 20px;
+        }
 
         &-subtitle {
             @extend %section-subtitle;
             padding-bottom: 16px;
+            @media (max-width: 768px) {
+                padding-bottom: 8px;
+            }
         }
 
         &-title {
@@ -2038,30 +2056,35 @@
 .join {
     margin-bottom: 120px;
 
+    height: 100vh;
     @media (max-width: 1440px) {
         margin-bottom: 60px;
     }
-
+    @media (max-width: 1024px) {
+        height: unset !important;
+    }
     @media (max-width: 768px) {
         margin-bottom: 40px;
     }
+    
 
     &__wrapper {
-        max-width: 1760px;
-        margin: 0px auto;
-        padding: 0 32px;
-
-        @media (max-width: 425px) {
-            padding: 0 20px;
-        }
+        // max-width: 1760px;
+        // margin: 0px auto;
+        // padding: 0 32px;
+        height: 100%;
+        // @media (max-width: 425px) {
+        //     padding: 0 20px;
+        // }
     }
 
     &__container {
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 160px 32px;
-        border-radius: 112px;
+        // border-radius: 112px;
         background-color: $mainGreen;
         background-image: url('../img/pattern.png');
         background-position: center;
@@ -2073,7 +2096,7 @@
 
         @media (max-width: 1440px) {
             padding: 96px 32px;
-            border-radius: 64px;
+            // border-radius: 64px;
         }
 
         @media (max-width: 1024px) {
@@ -2083,7 +2106,7 @@
 
         @media (max-width: 425px) {
             padding: 40px 20px;
-            border-radius: 20px;
+            // border-radius: 20px;
         }
     }
 
