@@ -117,7 +117,7 @@ $(function (scrollMagic) {
     var scene = new ScrollMagic.Scene({ triggerElement: ".features__content", duration: '100%', triggerHook: 0 })
         .setTween(".features__col:first-child", { translateY: 0 })
         .addTo(controller);
-    var scene = new ScrollMagic.Scene({ triggerElement: ".features__content", duration: '100%', triggerHook: 0 })
+    var scene = new ScrollMagic.Scene({ triggerElement: ".features__content", duration: '100%', triggerHook: 0, offset: -30 })
         .setTween(".features__col:last-child", { translateY: featuresCol })
         .addTo(controller);
     var scene = new ScrollMagic.Scene({ triggerElement: ".join", duration: 350, triggerHook: 0.8 })
