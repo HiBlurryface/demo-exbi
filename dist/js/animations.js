@@ -1,40 +1,32 @@
 // scroll magic animations
 $(function (scrollMagic) {
     var w = window.innerWidth;
-    var borderRadius = 0;
-    var padding = 0;
+    var borderRadius = 112;
+    var padding = 32;
     var translate;
     let duration = 400;
     let blockWidth = $('.work__block').width();
     let titleLeft = $('.features__heading-title').width() - $('.features__heading-title span:first-child').width();
     let titleRight = -($('.features__heading-title').width() - $('.features__heading-title span:last-child').width());
     let featuresCol = $('.features__content').height() - $('.features__wrapper').height();
-    padding = 32;
-    if (w > 2250) {
-        duration = 600;
-    }
-    if (w > 1440) {
-        borderRadius = 112;
-    }
-    if (w <= 1440) {
-        borderRadius = 64;
-    }
-    if (w <= 425) {
-        padding = 20;
-        borderRadius = 32;
-    }
-    // 2560px  = 1518px
-    // 1600px = 1806px;
-    let arr = {
-        'clientWidth': '1200',
-        'top': '12'
-    }
-    let workContent = $('.work__block').innerWidth() * 3 + 64;
-    translate = -(workContent - $('.work__container').innerWidth());
-    if (w <= 1760) {
-        translate = -(workContent - $('.work__slider').innerWidth() - 64);
-    }
 
+    window.addEventListener('resize', function () {
+        if (w > 2250) {
+            duration = 600;
+        }
+        if (w <= 1440) {
+            borderRadius = 64;
+        }
+        if (w <= 425) {
+            padding = 20;
+            borderRadius = 32;
+        }
+        let workContent = $('.work__block').innerWidth() * 3 + 64;
+        translate = -(workContent - $('.work__container').innerWidth());
+        if (w <= 1760) {
+            translate = -(workContent - $('.work__slider').innerWidth() - 64);
+        }
+    });
 
     // for( let element in slider ) {
     //     console.log(element)
@@ -55,7 +47,6 @@ $(function (scrollMagic) {
     // if (w <= 425) {
     //     translate = -1760 + w - 100 + 256 + 256 + 256 + 52;
     // }   
-    console.log(translate)
     var controller = new ScrollMagic.Controller({
         // refreshInterval: 0,
     });

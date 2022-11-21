@@ -1,13 +1,13 @@
 $(document).ready(function () {
     let w = window.innerWidth;
-    let translate = 0;
     let paymentHeight = $('.animation__payment').height();
     let paymentWrapperHeight = $('.animation__payment-wrapper').height();
-    if ( w > 1320 ) {
-        translate = paymentHeight - paymentWrapperHeight - 120;
-    } else {
-        translate = paymentHeight - paymentWrapperHeight;
-    }
+    let translate = paymentHeight - paymentWrapperHeight - 120;
+    window.addEventListener('resize', function () {
+        if (w <= 1320) {
+            translate = paymentHeight - paymentWrapperHeight;
+        }
+    })
     function introAnim() {
         setTimeout(function () {
             $('._anim-block-left').removeClass('_show-block')
@@ -51,7 +51,7 @@ $(document).ready(function () {
         }, 5500)
         setTimeout(function () {
             $('._method-crypto').removeClass('_anim-scale')
-        }, 6000)   
+        }, 6000)
         setTimeout(function () {
             $('.animation__wrapper').addClass('_anim')
             $('.animation__method,.animation__product').addClass('_hide')
@@ -139,11 +139,11 @@ $(document).ready(function () {
                 'top': '0'
             })
         }, 22500)
-        setTimeout(function() {
+        setTimeout(function () {
             introAnim()
         }, 23000)
     }
-    setTimeout(function() {
+    setTimeout(function () {
         introAnim()
     }, 1500)
 })
