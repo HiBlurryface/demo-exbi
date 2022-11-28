@@ -10,6 +10,22 @@ $(function (scrollMagic) {
     let titleRight = -($('.features__heading-title').width() - $('.features__heading-title span:last-child').width());
     let featuresCol = $('.features__content').height() - $('.features__wrapper').height();
 
+    if (w > 2250) {
+        duration = 600;
+    }
+    if (w <= 1440) {
+        borderRadius = 64;
+    }
+    if (w <= 425) {
+        padding = 20;
+        borderRadius = 32;
+    }
+    let workContent = $('.work__block').innerWidth() * 3 + 64;
+    translate = -(workContent - $('.work__container').innerWidth());
+    if (w <= 1760) {
+        translate = -(workContent - $('.work__slider').innerWidth() - 64);
+    }
+
     window.addEventListener('resize', function () {
         if (w > 2250) {
             duration = 600;

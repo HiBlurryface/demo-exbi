@@ -3,6 +3,9 @@ $(document).ready(function () {
     let paymentHeight = $('.animation__payment').height();
     let paymentWrapperHeight = $('.animation__payment-wrapper').height();
     let translate = paymentHeight - paymentWrapperHeight - 120;
+    if (w <= 1320) {
+        translate = paymentHeight - paymentWrapperHeight;
+    }
     window.addEventListener('resize', function () {
         if (w <= 1320) {
             translate = paymentHeight - paymentWrapperHeight;
