@@ -3,7 +3,6 @@
 
     &__row {
         display: flex;
-        gap: 32px;
 
         &:not(:last-child) {
             margin-bottom: 32px;
@@ -11,7 +10,6 @@
 
         @media (max-width: 1024px) {
             flex-wrap: wrap;
-            gap: 16px;
 
             &:not(:last-child) {
                 margin-bottom: 16px;
@@ -25,7 +23,14 @@
                 align-items: center;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                gap: 16px;
+                padding-top: 48px;
+                @media (max-width: 1440px) {
+                    padding-top: 16px;
+                }
+                @media (max-width: 900px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
             }
         }
     }
@@ -41,8 +46,16 @@
         flex-direction: column;
         justify-content: space-between;
 
+        &:not(:last-child) {
+            margin: 0 32px 0 0;
+        }
+
         @media (max-width: 1024px) {
             max-width: unset;
+
+            &:not(:last-child) {
+                margin: 0 0 16px 0;
+            }
         }
 
         &:last-child {
@@ -56,8 +69,16 @@
 
         &-group {
             display: flex;
-            gap: 16px 32px;
             flex-wrap: wrap;
+            margin: 16px 0 0 0;
+            &:first-child {
+                @media (max-width: 900px) {
+                    flex-direction: column;
+                }
+            }
+            // &:last-child {
+            //     margin: 16px 0 0 0;
+            // }
         }
 
         &-subscribe {
@@ -99,8 +120,12 @@
 
     &__logo {
         display: flex;
-        gap: 20px;
         flex-wrap: wrap;
+        &-link {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
     }
 
     &__lang {
@@ -127,7 +152,6 @@
             border-radius: 40px 40px 40px 40px;
             display: flex;
             align-items: center;
-            gap: 0 10px;
             z-index: 10;
             transition: 0.4s;
 
@@ -165,7 +189,6 @@
             border-radius: 0 0 50px 50px;
             cursor: pointer;
             padding: 24px 48px;
-            gap: 0 10px;
             display: flex;
             align-items: center;
             margin-top: auto;
@@ -181,6 +204,7 @@
             font-size: 24px;
             line-height: 150%;
             color: $mainBlack;
+            padding: 0 10px;
         }
 
         &-arrow {
@@ -299,7 +323,6 @@
 
     &__form {
         display: flex;
-        gap: 8px;
         width: 100%;
 
         @media (max-width: 520px) {
@@ -307,6 +330,12 @@
         }
 
         &-wrapper {
+            @media (min-width: 521px) {
+                margin: 0 8px 0 0;
+            }
+            @media (max-width: 520px) {
+                margin: 0 0 8px 0;
+            }
             width: 100%;
             position: relative;
         }
@@ -395,15 +424,22 @@
     }
 
     &__nav {
+        margin: 0 0 0 32px;
+        @media (max-width: 900px) {
+            margin: 16px 0 0 0;
+        } 
         &-list {
             display: flex;
-            gap: 4px 16px;
+            // gap: 4px 16px;
             flex-wrap: wrap;
         }
 
         &-item {
             cursor: pointer;
             list-style-type: none;
+            &:not(:last-child) {
+                margin: 0 16px 0 0;
+            }
         }
 
         &-link {
